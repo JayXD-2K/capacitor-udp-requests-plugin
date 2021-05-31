@@ -19,4 +19,17 @@ public class UdpRequestsPlugin extends Plugin {
         ret.put("value", implementation.echo(value));
         call.resolve(ret);
     }
+
+    @PluginMethod
+    public void sendUdpRequest(PluginCall call){
+        String address = call.getString("address");
+        String port = call.getString("port");
+        String payload = call.getString("payload");
+
+
+
+        call.resolve();
+    }
+
+
 }
